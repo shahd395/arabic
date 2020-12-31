@@ -204,4 +204,4 @@ f2 = f1_score (y_test, yhat,average='weighted', labels=[6], zero_division=0)
     q1 = "مصاب"
     result= 'مصاب'
 
-    return result
+ return result
