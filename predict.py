@@ -191,16 +191,16 @@ f2 = f1_score (y_test, yhat,average='weighted', labels=[6], zero_division=0)
 #print('---------------------------------------------------------------')
 result = ''
  
- if form.getvalue('q1'):
-    q1_value = form.getvalue('1')
- else:
-    q1 = "معافى"
-    result= 'معافى'
+if form.getvalue('q1'):
+ q1_value = form.getvalue('1')
+else:
+ q1 = "معافى"
+ result= 'معافى'
         
- if form.getvalue('q37'):
-    q1_value = form.getvalue('13')
- else:
-    q1 = "مصاب"
-    result= 'مصاب'
+if form.getvalue('q37'):
+ q1_value = form.getvalue('13')
+else:
+ q1 = "مصاب"
+ result= 'مصاب'
 
 return result
