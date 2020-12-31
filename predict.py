@@ -189,8 +189,7 @@ f2 = f1_score (y_test, yhat,average='weighted', labels=[6], zero_division=0)
 
 
 #print('---------------------------------------------------------------')
-
- result = ''
+result = ''
  
  if form.getvalue('q1'):
     q1_value = form.getvalue('1')
@@ -204,4 +203,4 @@ f2 = f1_score (y_test, yhat,average='weighted', labels=[6], zero_division=0)
     q1 = "مصاب"
     result= 'مصاب'
 
- return result
+return result
