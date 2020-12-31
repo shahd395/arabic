@@ -197,89 +197,17 @@ def runJob():
     #print('---------------------------------------------------------------')
 
     result = ''
-    
-    if (0 <=precision_score(y_test, yhat, average = "weighted", labels=[1], zero_division=0) <= 0.73) or (recall_score(y_test, yhat, average = "weighted", labels=[1], zero_division=0) == 0.71) or (0<=f1_score (y_test, yhat,average='weighted', labels=[1], zero_division=0)<= 0.72):
-        print('exposed')
-        result = 'exposed'
-    elif (0 <=precision_score(y_test, yhat, average = "weighted", labels=[1], zero_division=0) <= 0.73) and (recall_score(y_test, yhat, average = "weighted", labels=[1], zero_division=0) == 0.71) and (0<=f1_score (y_test, yhat,average='weighted', labels=[1], zero_division=0)<= 0.72):
-        print('exposed')
-        result = 'exposed'
-    elif (0 <=precision_score(y_test, yhat, average = "weighted", labels=[1], zero_division=0) <= 0.73) or (recall_score(y_test, yhat, average = "weighted", labels=[1], zero_division=0) == 0.71) and (0<=f1_score (y_test, yhat,average='weighted', labels=[1], zero_division=0)<= 0.72):
-        print('exposed')
-        result = 'exposed'
-    elif (0 <=precision_score(y_test, yhat, average = "weighted", labels=[1], zero_division=0) <= 0.73) and (recall_score(y_test, yhat, average = "weighted", labels=[1], zero_division=0) == 0.71) or (0<=f1_score (y_test, yhat,average='weighted', labels=[1], zero_division=0)<= 0.72):
-        print('exposed')
-        result = 'exposed'
-    
-    
-    
-    elif (0.83 <=precision_score(y_test, yhat, average = "weighted", labels=[2], zero_division=0) <= 0.89) or (0<= recall_score(y_test, yhat, average = "weighted", labels=[2], zero_division=0) <= 0.70) or (0.73 <=f1_score (y_test, yhat,average='weighted', labels=[2], zero_division=0) <= 0.76):
-        print('diseased')
-        result = 'diseased'
-    elif (0.83 <=precision_score(y_test, yhat, average = "weighted", labels=[2], zero_division=0) <= 0.89) and (0<= recall_score(y_test, yhat, average = "weighted", labels=[2], zero_division=0) <= 0.70) and (0.73 <=f1_score (y_test, yhat,average='weighted', labels=[2], zero_division=0) <= 0.76):
-        print('diseased')
-        result = 'diseased'
-    elif (0.83 <=precision_score(y_test, yhat, average = "weighted", labels=[2], zero_division=0) <= 0.89) or (0<= recall_score(y_test, yhat, average = "weighted", labels=[2], zero_division=0) <= 0.70) and (0.73 <=f1_score (y_test, yhat,average='weighted', labels=[2], zero_division=0) <= 0.76):
-        print('diseased')
-        result = 'diseased'
-    elif (0.83 <=precision_score(y_test, yhat, average = "weighted", labels=[2], zero_division=0) <= 0.89) and (0<= recall_score(y_test, yhat, average = "weighted", labels=[2], zero_division=0) <= 0.70) or (0.73 <=f1_score (y_test, yhat,average='weighted', labels=[2], zero_division=0) <= 0.76):
-        print('diseased')
-        result = 'diseased'
-    
-    
-    elif (0.74 <=precision_score(y_test, yhat, average = "weighted",labels=[3], zero_division=0) <= 0.82) and (0.72 <=recall_score(y_test, yhat, average = "weighted",labels=[3], zero_division=0) == 0.79) and (0.77 <=f1_score (y_test, yhat,average='weighted',labels=[3], zero_division=0) <= 0.94):
-        print('susceptible')
-        result = 'susceptible'
-    elif (0.74 <=precision_score(y_test, yhat, average = "weighted",labels=[3], zero_division=0) <= 0.82) or (0.72 <=recall_score(y_test, yhat, average = "weighted",labels=[3], zero_division=0) == 0.79) or (0.77 <=f1_score (y_test, yhat,average='weighted',labels=[3], zero_division=0) <= 0.94):
-        print('susceptible')
-        result = 'susceptible'
-    elif (0.74 <=precision_score(y_test, yhat, average = "weighted",labels=[3], zero_division=0) <= 0.82) or (0.72 <=recall_score(y_test, yhat, average = "weighted",labels=[3], zero_division=0) == 0.79) and (0.77 <=f1_score (y_test, yhat,average='weighted',labels=[3], zero_division=0) <= 0.94):
-        print('susceptible')
-        result = 'susceptible'
-    elif (0.74 <=precision_score(y_test, yhat, average = "weighted",labels=[3], zero_division=0) <= 0.82) and (0.72 <=recall_score(y_test, yhat, average = "weighted",labels=[3], zero_division=0) == 0.79) or (0.77 <=f1_score (y_test, yhat,average='weighted',labels=[3], zero_division=0) <= 0.94):
-        print('susceptible')
-        result = 'susceptible'
-    
-    
-    elif (precision_score(y_test, yhat, average = "weighted", labels=[4], zero_division=0) ==1) and (0.80 <=recall_score(y_test, yhat, average = "weighted", labels=[4], zero_division=0) <= 0.99) and (f1_score (y_test, yhat,average='weighted', labels=[4], zero_division=0) == 1):
-        print('infectious')
-        result = 'infectious'
-    elif (precision_score(y_test, yhat, average = "weighted", labels=[4], zero_division=0) ==1) or (0.80 <=recall_score(y_test, yhat, average = "weighted", labels=[4], zero_division=0) <= 0.99) or (f1_score (y_test, yhat,average='weighted', labels=[4], zero_division=0) == 1):
-        print('infectious')
-        result = 'infectious'
-    elif (precision_score(y_test, yhat, average = "weighted", labels=[4], zero_division=0) ==1) or (0.80 <=recall_score(y_test, yhat, average = "weighted", labels=[4], zero_division=0) <= 0.99) and (f1_score (y_test, yhat,average='weighted', labels=[4], zero_division=0) == 1):
-        print('infectious')
-        result = 'infectious'
-    elif (precision_score(y_test, yhat, average = "weighted", labels=[4], zero_division=0) ==1) and (0.80 <=recall_score(y_test, yhat, average = "weighted", labels=[4], zero_division=0) <= 0.99) or (f1_score (y_test, yhat,average='weighted', labels=[4], zero_division=0) == 1):
-        print('infectious')
-        result = 'infectious'
-    
-    
-    elif (precision_score(y_test, yhat, average = "weighted", labels=[5], zero_division=0) ==1) and (recall_score(y_test, yhat, average = "weighted", labels=[5], zero_division=0) == 1) and (0.98 <= f1_score (y_test, yhat,average='weighted', labels=[5], zero_division=0) <= 0.99):
-        print('recovred')
-        result = 'recovred'
-    elif (precision_score(y_test, yhat, average = "weighted", labels=[5], zero_division=0) ==1) or (recall_score(y_test, yhat, average = "weighted", labels=[5], zero_division=0) == 1) or (0.98 <= f1_score (y_test, yhat,average='weighted', labels=[5], zero_division=0) <= 0.99):
-        print('recovred')
-        result = 'recovred'
-    elif (precision_score(y_test, yhat, average = "weighted", labels=[5], zero_division=0) ==1) or (recall_score(y_test, yhat, average = "weighted", labels=[5], zero_division=0) == 1) and (0.98 <= f1_score (y_test, yhat,average='weighted', labels=[5], zero_division=0) <= 0.99):
-        print('recovred')
-        result = 'recovred'
-    elif (precision_score(y_test, yhat, average = "weighted", labels=[5], zero_division=0) ==1) and (recall_score(y_test, yhat, average = "weighted", labels=[5], zero_division=0) == 1) or (0.98 <= f1_score (y_test, yhat,average='weighted', labels=[5], zero_division=0) <= 0.99):
-        print('recovred')
-        result = 'recovred'
-    
-    
-    elif (0.90<= precision_score(y_test, yhat, average = "weighted", labels=[6], zero_division=0) <=0.99) and (recall_score(y_test, yhat, average = "weighted", labels=[6], zero_division=0) == 1) and   (0.95 <= f1_score (y_test, yhat,average='weighted', labels=[6], zero_division=0) <= 0.97):
-        print('recovred possible injury again')
-        result = 'recovred possible injury again'
-    elif (0.90<= precision_score(y_test, yhat, average = "weighted", labels=[6], zero_division=0) <=0.99) or (recall_score(y_test, yhat, average = "weighted", labels=[6], zero_division=0) == 1) or   (0.95 <= f1_score (y_test, yhat,average='weighted', labels=[6], zero_division=0) <= 0.97):
-        print('recovred possible injury again')
-        result = 'recovred possible injury again'
-    elif (0.90<= precision_score(y_test, yhat, average = "weighted", labels=[6], zero_division=0) <=0.99) or (recall_score(y_test, yhat, average = "weighted", labels=[6], zero_division=0) == 1) and   (0.95 <= f1_score (y_test, yhat,average='weighted', labels=[6], zero_division=0) <= 0.97):
-        print('recovred possible injury again')
-        result = 'recovred possible injury again'
-    elif (0.90<= precision_score(y_test, yhat, average = "weighted", labels=[6], zero_division=0) <=0.99) and (recall_score(y_test, yhat, average = "weighted", labels=[6], zero_division=0) == 1) or   (0.95 <= f1_score (y_test, yhat,average='weighted', labels=[6], zero_division=0) <= 0.97):
-        print('recovred possible injury again')
-        result = 'recovred possible injury again'
+    if form.getvalue('q1'):
+        q1_value = form.getvalue('1')
+    else:
+        q1 = "معافى"
+        result= 'معافى'
+        
+    if form.getvalue('q37'):
+        q1_value = form.getvalue('13')
+    else:
+        q1 = "مصاب"
+        result= 'مصاب'
 
+    return result
     return result
